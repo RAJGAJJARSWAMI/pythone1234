@@ -52,7 +52,7 @@ pipeline {
     }
   
     }  
-}
+
 
 always {
   // remove built docker image and prune system
