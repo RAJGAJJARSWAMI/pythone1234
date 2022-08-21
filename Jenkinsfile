@@ -63,7 +63,3 @@ always {
   print 'Cleaning up the Docker system.'
   sh 'docker system prune -f'
 }
-Footer
-© 2022 GitHub, Inc.
-Footer navigation
-Terms
