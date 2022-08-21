@@ -45,7 +45,7 @@ pipeline {
     stage ('K8S Deploy') {
         steps {
             script {
-               kubernetesDeploy configs: 'k8s-deployment.yaml', kubeConfig: [path: ''], kubeconfigId: 'mykubeconfig', secretName: '', ssh: [sshCredentialsId: '*', sshServer: ''], textCredentials: [certificateAuthorityData: '', clientCertificateData: '', clientKeyData: '', serverUrl: 'https://']         
+               kubernetesDeploy configs: '', kubeConfig: [path: '/home/ubuntu/.kube'], kubeconfigId: 'mykubeconfig', secretName: '', ssh: [sshCredentialsId: 'minikube2', sshServer: ''], textCredentials: [certificateAuthorityData: '/home/ubuntu/.minikube/ca.crt', clientCertificateData: ' /home/ubuntu/.minikube/profiles/minikube/client.crt', clientKeyData: '/home/ubuntu/.minikube/profiles/minikube/client.key', serverUrl: 'https://192.168.49.2:8443']         
                
             }
         }
