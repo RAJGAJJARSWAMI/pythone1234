@@ -46,7 +46,7 @@ pipeline {
         steps {
             script {
                kubernetesDeploy configs: 'k8s-deployment.yaml'        
-               
+            }
             }
         }
     }
