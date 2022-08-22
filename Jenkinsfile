@@ -59,3 +59,4 @@ always {
   print 'Cleaning up the Docker system.'
   sh 'docker system prune -f'
 }
+}
