@@ -48,7 +48,7 @@ pipeline {
                 configs: 'k8s-deployment.yaml',
                     kubeconfigId: 'mykubeconfig',
                     enableConfigSubstitution: true
-            }
+            )
                }    
         }
     }
