@@ -50,7 +50,7 @@ pipeline {
                     kubeconfigId: 'K8S',
                     enableConfigSubstitution: true
                     )           
-               
+               }
             }
         }
     }
