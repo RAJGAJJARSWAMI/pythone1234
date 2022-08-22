@@ -47,7 +47,7 @@ pipeline {
           //  sh "cd /var/lib/jenkins/workspace/pythone"
           //  sh "cp -R /var/lib/jenkins/workspace/pythone/* /$HOME"
            // sh "cd /$HOME && kubectl apply -f k8s-deployment.yaml -n prod"
-            sh "kubectl apply -f k8s-deployment.yaml"
+            sh "sudo kubectl apply -f k8s-deployment.yaml"
             }
             
         }
