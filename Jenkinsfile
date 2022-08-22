@@ -42,12 +42,12 @@ pipeline {
       }
     }
    
-   // stage ('K8S Deploy') {
-       // steps {
-          //  script {
-              // kubernetesDeploy configs: 'k8s-deployment.yaml'        
-         //   }
-         //   }
+    stage ('K8S Deploy') {
+        steps {
+          script {
+             kubectl apply -f k8s-deployment.yaml        
+            }
+            }
         }
     }
   
