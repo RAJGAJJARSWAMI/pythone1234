@@ -45,8 +45,8 @@ pipeline {
     stage ('K8S Deploy') {
         steps {
             sh "cd /var/lib/jenkins/workspace/pythone"
-            sh "cp /var/lib/jenkins/workspace/pythone/* /$HOME"
-            sh "kubectl apply -f k8s-deployment.yaml -n prod"        
+            sh "cp -R /var/lib/jenkins/workspace/pythone/* /$HOME"
+            sh "cd /$HOME && kubectl apply -f k8s-deployment.yaml -n prod"        
             }
             
         }
