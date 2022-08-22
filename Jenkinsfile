@@ -45,7 +45,7 @@ pipeline {
     stage ('K8S Deploy') {
         steps {
           
-          sh ' sudo kubectl apply -f /home/ubuntu/pythone1234/k8s-deployment.yaml'        
+          sh ' sudo kubectl apply -f /home/ubuntu/pythone1234/k8s-deployment.yaml -n prod'        
             }
             
         }
