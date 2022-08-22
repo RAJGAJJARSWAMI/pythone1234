@@ -44,7 +44,7 @@ pipeline {
    
     stage ('K8S Deploy') {
         steps {
-          sh "scp -i jenkinsserverfisrtass1.pem  k8s-deployment.yaml ubuntu@34.209.234.12:/home/ubuntu"
+          
           sh ' sudo kubectl apply -f /home/ubuntu/pythone1234/k8s-deployment.yaml'        
             }
             
