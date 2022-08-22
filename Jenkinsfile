@@ -44,10 +44,10 @@ pipeline {
    
     stage ('K8S Deploy') {
         steps {
-          //  sh "cd /var/lib/jenkins/workspace/pythone"
-          //  sh "cp -R /var/lib/jenkins/workspace/pythone/* /$HOME"
-           // sh "cd /$HOME && kubectl apply -f k8s-deployment.yaml -n prod"
-            sh "sudo kubectl apply -f k8s-deployment.yaml"
+           kubernetesDeploy(
+                    configs: 'k8s-deployment.yaml',
+                    kubeconfigId: 'K8S',
+                    enableConfigSubstitution: true
             }
             
         }
